@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mbtiapp/questionpage.dart';
@@ -34,6 +35,11 @@ class Selectpage extends StatelessWidget {
                 itemBuilder: (context, value) {
                   return InkWell(
                     onTap: () async {
+                      await FirebaseAnalytics.instance
+                          .logEvent(name: "test_click", parameters: {
+                        "test_name":
+                            list['questions'][value]['title'].toString(),
+                      });
                       Navigator.push(
                         context,
                         MaterialPageRoute(

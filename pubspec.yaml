@@ -32,12 +32,12 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_auth: ^5.3.1
   firebase_core: ^3.6.0
+  firebase_analytics: ^11.3.5
   firebase_remote_config: ^5.1.5
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  firebase_analytics: ^11.3.5
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter

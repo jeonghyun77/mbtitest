@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mbtiapp/startpage.dart';
 
 class Detailpage extends StatefulWidget {
-  final String question;
+  final String queston;
   final String answer;
-  const Detailpage({super.key, required this.question, required this.answer});
+  const Detailpage({super.key, required this.queston, required this.answer});
 
   @override
   State<Detailpage> createState() => _DetailpageState();
@@ -18,14 +17,11 @@ class _DetailpageState extends State<Detailpage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(widget.question),
+            Text(widget.queston),
             Text(widget.answer),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Startpage()),
-                  );
+                  Navigator.of(context).pop();
                 },
                 child: Text('돌아가기'))
           ],
