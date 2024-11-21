@@ -6,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:mbtiapp/questionpage.dart';
 
 class Selectpage extends StatelessWidget {
+  
+
   Future<String> loadAssets() async {
     return await rootBundle.loadString('res/api/list.json');
   }

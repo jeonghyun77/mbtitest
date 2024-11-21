@@ -1,13 +1,14 @@
 import 'dart:convert';
-
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mbtiapp/detailpage.dart';
 
 class Questionpage extends StatefulWidget {
   final String question;
-  const Questionpage({super.key, required this.question});
+
+  Questionpage({super.key, required this.question});
 
   @override
   State<Questionpage> createState() => _QuestionpageState();
@@ -21,10 +22,8 @@ class _QuestionpageState extends State<Questionpage> {
     return await rootBundle.loadString('res/api/$fileName.json');
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
+  Future<void> getAppVersion()async{
+    
   }
 
   @override

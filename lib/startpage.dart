@@ -23,6 +23,7 @@ class Startpage extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
               ),
             ),
+            Spacer(),
             ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(Colors.blueAccent)),
@@ -33,11 +34,15 @@ class Startpage extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  '시작하기',
+                  '로그인',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),
-            Spacer(),
+            GestureDetector(
+                onTap: () {}, child: Image.asset('assets/kakao_login.png')),
+            SizedBox(
+              height: 200,
+            ),
           ],
         ),
       ),
