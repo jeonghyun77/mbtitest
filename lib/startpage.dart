@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mbtiapp/login/sample_screen.dart';
 import 'package:mbtiapp/selectpage.dart';
 
 class Startpage extends StatelessWidget {
@@ -34,15 +35,24 @@ class Startpage extends StatelessWidget {
                   );
                 },
                 child: Text(
+                  '시작하기',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                )),
+            ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.blueAccent)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SampleScreen()),
+                  );
+                },
+                child: Text(
                   '로그인',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),
-            GestureDetector(
-                onTap: () {}, child: Image.asset('assets/kakao_login.png')),
-            SizedBox(
-              height: 200,
-            ),
           ],
         ),
       ),
