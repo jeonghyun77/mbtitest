@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "513309634754",
     "project_id": "mbti-14d44",
-    "storage_bucket": "mbti-14d44.appspot.com"
+    "storage_bucket": "mbti-14d44.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +12,12 @@
           "package_name": "com.example.mbtiapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "513309634754-734qpk0bhtil0pk5p2s0fctfshj8bsdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBkXFq0F48x24UqNPpqH9DHzYPNp6CQw5M"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513309634754-734qpk0bhtil0pk5p2s0fctfshj8bsdl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "513309634754-558hltg5ihutpuh5uqj52m0h00b4l3f6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mbtiapp"
+              }
+            }
+          ]
         }
       }
     }

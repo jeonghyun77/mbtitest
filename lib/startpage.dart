@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mbtiapp/login/sample_screen.dart';
+
 import 'package:mbtiapp/selectpage.dart';
+import 'package:mbtiapp/user/join.dart';
+import 'package:mbtiapp/user/signinPage.dart';
 
 class Startpage extends StatelessWidget {
   const Startpage({super.key});
@@ -15,6 +17,7 @@ class Startpage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               margin: EdgeInsets.symmetric(vertical: 20),
@@ -24,10 +27,13 @@ class Startpage extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
               ),
             ),
-            Spacer(),
+            SizedBox(
+              height: 200,
+            ),
             ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(Colors.blueAccent)),
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(),
+                    backgroundColor: Colors.indigo),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -39,20 +45,36 @@ class Startpage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 )),
-            ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(Colors.blueAccent)),
+            OutlinedButton(
+                style: OutlinedButton.styleFrom(shape: LinearBorder.bottom()),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SampleScreen()),
+                    MaterialPageRoute(builder: (context) => Signinpage()),
                   );
                 },
                 child: Text(
                   '로그인',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 10),
                 )),
+            OutlinedButton(
+                style: OutlinedButton.styleFrom(shape: LinearBorder.bottom()),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Join()),
+                  );
+                },
+                child: Text(
+                  '회원가입',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 10),
+                ))
           ],
         ),
       ),
